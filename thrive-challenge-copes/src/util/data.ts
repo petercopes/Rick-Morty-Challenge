@@ -1,7 +1,11 @@
+import { ValueOf } from "next/dist/shared/lib/constants";
+
 export enum TAB_NAME {
-    CHARACTERS = "characters",
-    LOCATIONS = "locations"
+    CHARACTERS = "CHARACTERS",
+    LOCATIONS = "LOCATIONS"
 }
+export type Tab = ValueOf<TAB_NAME>;
+
 export enum TAB_ROLES {
     TAB = "tab",
     TABPANEL = "tabpanel",

@@ -2,9 +2,13 @@ import { consolasFont } from "@/util/fonts";
 
 export const theme = {
   colors: {
+    white:'#ffffff',
+
+    
     screenBackground: '#030a08',
     buttonInactive:'#229922',
     buttonActive:'#66ff66',
+    
 
     buttonActiveShadow:'rgba(0, 255, 0, 0.7)',
   },
