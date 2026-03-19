@@ -15,5 +15,7 @@ export enum TAB_ROLES {
 export const API_ENDPOINT = {
     BASE_URL: 'https://rickandmortyapi.com/api',
     CHARACTERS_ENDPOINT:'/character',
-    LOCATIONS_ENDPOINT:'/location'
+    CHARACTERS_QUERY_KEY:'characters',
+    LOCATIONS_ENDPOINT:'/location',
+    LOCATION_QUERY_KEY:'locations',
 }

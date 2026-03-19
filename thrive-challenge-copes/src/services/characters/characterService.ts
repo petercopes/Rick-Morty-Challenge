@@ -1,6 +1,6 @@
 import { Character, APIResponse } from './characterService.types';
 import { createApiClient, handleApiError } from '@/util/axios';
-import { API_ENDPOINT, TAB_NAME } from '@/util/data';
+import { API_ENDPOINT } from '@/util/data';
 import { useQuery } from '@tanstack/react-query';
 
 const apiClient = createApiClient();
@@ -14,11 +14,9 @@ export const fetchCharacters = async (): Promise<Character[]> => {
   }
 };
 
-
-
 export const useCharacters = () => {
   return useQuery({
-    queryKey: [TAB_NAME.CHARACTERS],
+    queryKey: [API_ENDPOINT.CHARACTERS_QUERY_KEY],
     queryFn: fetchCharacters,
     staleTime: Infinity, 
   });

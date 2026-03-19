@@ -21,7 +21,6 @@ export const CharacterCard = (character: Character) => {
             {` [${character.status}]`}
           </CharacterDetailsListItem>
           <CharacterDetailsListItem>
-            {" "}
             {`> SPECIE: ${character.species} `}
           </CharacterDetailsListItem>
         </CharacterDetailsList>

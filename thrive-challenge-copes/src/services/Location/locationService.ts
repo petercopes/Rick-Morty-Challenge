@@ -2,7 +2,7 @@ import { createApiClient, handleApiError } from "@/util/axios";
 import { APIResponse } from "../characters/characterService.types";
 import { Location } from "./locationService.types";
 import { useQuery } from "@tanstack/react-query";
-import { API_ENDPOINT, TAB_NAME } from "@/util/data";
+import { API_ENDPOINT } from "@/util/data";
 
 const apiClient = createApiClient();
 
@@ -17,7 +17,7 @@ export const fetchLocations = async (): Promise<Location[]> => {
 
 export const useLocations = () => {
   return useQuery({
-    queryKey: [TAB_NAME.LOCATIONS],
+    queryKey: [API_ENDPOINT.LOCATION_QUERY_KEY],
     queryFn: fetchLocations,
     staleTime: Infinity,
   });
