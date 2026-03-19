@@ -24,7 +24,6 @@ export const CharactersTab = ({ tabKey }: { tabKey: number }) => {
       {charactersLoading && (
         <Loader
           isLoading={charactersLoading}
-          fullScreen
           size={50}
           color={theme.colors.white}
         />

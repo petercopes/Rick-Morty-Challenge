@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const StyledTabButton = styled.button<{ isActive?: boolean }>`
+export const StyledTabButton = styled.button<{ $isActive?: boolean }>`
   flex: 1;
   padding: ${({ theme }) => theme.spacing.md};
   cursor: pointer;
@@ -24,7 +24,7 @@ export const StyledTabButton = styled.button<{ isActive?: boolean }>`
     transition: ${({ theme }) => theme.transitions.default};
     font-weight: 900;
   }
-  ${({isActive,theme}) => isActive && (`
+  ${({$isActive,theme}) => $isActive && (`
     color: ${theme.colors.primaryGreen};
     text-shadow:${theme.shadows.activeButtonTabText});
     &::before {

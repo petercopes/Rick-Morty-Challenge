@@ -12,7 +12,7 @@ export const TabButton: React.FC<ButtonProps> = ({
     <StyledTabButton
       id={`${tabName}Tab`}
       onClick={onClick}
-      isActive={isActive}
+      $isActive={isActive}
       role={TAB_ROLES.TAB}
       aria-selected={isActive}
       aria-controls={`${tabName}Panel`}

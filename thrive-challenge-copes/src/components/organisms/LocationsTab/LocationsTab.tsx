@@ -24,7 +24,6 @@ export const LocationsTab = ({ tabKey }: { tabKey: number }) => {
       {isLocationsLoading && (
         <Loader
           isLoading={isLocationsLoading}
-          fullScreen
           size={50}
           color={theme.colors.white}
         />

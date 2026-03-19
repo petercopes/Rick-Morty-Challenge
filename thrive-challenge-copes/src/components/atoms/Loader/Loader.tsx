@@ -5,14 +5,13 @@ import { LoaderProps } from "./Loader.types";
 
 export const Loader: React.FC<LoaderProps> = ({
   isLoading,
-  fullScreen = false,
   size = 35,
   color = "#111",
 }) => {
   if (!isLoading) return null;
 
   return (
-    <LoaderContainer fullScreen={fullScreen}>
+    <LoaderContainer>
       <ClipLoader
         color={color}
         loading={isLoading}
