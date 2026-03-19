@@ -4,6 +4,7 @@ import { Loader } from "../../atoms/Loader/Loader";
 import { theme } from "@/styles/theme";
 import { CharacterCard } from "@/components/atoms/CharacterCard/CharacterCard";
 import { TabPanel } from "./CharactersTab.styles";
+import { Error } from "@/components/atoms/Error/Error";
 
 export const CharactersTab = ({ tabKey }: { tabKey: number }) => {
   const {
@@ -28,7 +29,7 @@ export const CharactersTab = ({ tabKey }: { tabKey: number }) => {
           color={theme.colors.white}
         />
       )}
-      {isCharactersError && <p>Error: {charactersError.message}</p>}
+      {isCharactersError && <Error message={charactersError.message} />}
       {charactersData &&
         charactersData.map((item) => (
           <CharacterCard

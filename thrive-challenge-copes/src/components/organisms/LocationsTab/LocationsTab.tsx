@@ -4,6 +4,7 @@ import { theme } from "@/styles/theme";
 import { useLocations } from "@/services/Location/locationService";
 import { TabPanel } from "../CharactersTab/CharactersTab.styles";
 import { LocationCard } from "@/components/atoms/LocationCard/LocationCard";
+import { Error } from "@/components/atoms/Error/Error";
 
 export const LocationsTab = ({ tabKey }: { tabKey: number }) => {
   const {
@@ -28,7 +29,7 @@ export const LocationsTab = ({ tabKey }: { tabKey: number }) => {
           color={theme.colors.white}
         />
       )}
-      {isLocationsError && <p>Error: {locationsError.message}</p>}
+      {isLocationsError && <Error message={locationsError.message} />}
       {locationsData &&
         locationsData.map((item) => (
           <LocationCard
