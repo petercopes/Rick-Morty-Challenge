@@ -3,6 +3,7 @@ import { Loader } from "../../atoms/Loader/Loader";
 import { theme } from "@/styles/theme";
 import { useLocations } from "@/services/Location/locationService";
 import { TabPanel } from "../CharactersTab/CharactersTab.styles";
+import { LocationCard } from "@/components/atoms/LocationCard/LocationCard";
 
 export const LocationsTab = ({ tabKey }: { tabKey: number }) => {
   const {
@@ -29,7 +30,14 @@ export const LocationsTab = ({ tabKey }: { tabKey: number }) => {
       )}
       {isLocationsError && <p>Error: {locationsError.message}</p>}
       {locationsData &&
-        locationsData.map((item) => <p key={item.id}>{item.name}</p>)}
+        locationsData.map((item) => (
+          <LocationCard
+            id={item.id}
+            name={item.name}
+            type={item.type}
+            key={item.id}
+          />
+        ))}
     </TabPanel>
   );
 };

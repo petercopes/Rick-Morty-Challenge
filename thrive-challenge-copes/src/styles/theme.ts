@@ -4,13 +4,19 @@ export const theme = {
   colors: {
     white:'#ffffff',
 
-    
-    screenBackground: '#030a08',
-    buttonInactive:'#229922',
-    buttonActive:'#66ff66',
-    
 
-    buttonActiveShadow:'rgba(0, 255, 0, 0.7)',
+    screenBackground: '#010806',
+    locationBackground:'#040f0c',
+    
+    primaryGreen:'#66ff66',
+    secondaryGreen:'#229922',
+    shadowGreen:'#00ff00',
+    screenOverlayShadow:'#0e420e6a',
+    primaryGreenShadow:'rgba(0, 255, 0, 0.7)',
+
+    locationInfo: '#f1e05a',
+
+    cardBorder:'#2a2e31',
   },
 
   font: {
@@ -61,6 +67,11 @@ spacing: {
   shadows: {
     activeButtonTab: '0 4px 12px rgba(0, 255, 0, 0.7)',
     activeButtonTabText:'0 0 5px #66ff66',
+    characterInfoText:'0 0 3px #00ff00',
+    locationInfo:'0 0 5px rgba(241, 224, 90, 0.3)'
+  },
+  containers:{
+    tabContentHeight:'530px'
   },
 } as const;
 
