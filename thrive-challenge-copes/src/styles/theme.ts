@@ -3,8 +3,8 @@ import { consolasFont } from "@/util/fonts";
 export const theme = {
   colors: {
     white:'#ffffff',
-
-
+    black:'#000000',
+    deviceBackground:'#c8ccd0',
     screenBackground: '#010806',
     locationBackground:'#040f0c',
     
@@ -17,6 +17,10 @@ export const theme = {
     locationInfo: '#f1e05a',
 
     cardBorder:'#2a2e31',
+
+    characterStatusAlive: '#55cc44',
+    characterStatusDead:'#d63d2e',
+    characterStatusUnknown: '#808080',
   },
 
   font: {
@@ -50,16 +54,15 @@ spacing: {
     xxxl: '40px',
     xxxxl: '48px',
 },
-
-  breakpoints: {
-    sm: '640px',
-    md: '768px',
-    lg: '1024px',
-    xl: '1280px',
-  },
+borders:{
+  screenBorder:'15px solid black;',
+  characterCard:'2px solid #2a2e31',
+},
   zIndices: {
     base: 1,
     shadow:2,
+    screenShadow:3,
+    screenLines:5,
   },
   transitions: {
     default: 'all 300ms ease',
@@ -71,7 +74,9 @@ spacing: {
     locationInfo:'0 0 5px rgba(241, 224, 90, 0.3)'
   },
   containers:{
-    tabContentHeight:'530px'
+    tabContentHeight:'530px',
+    deviceWidth:'1000px',
+    deviceHeight:'90vh',
   },
 } as const;
 
