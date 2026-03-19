@@ -1,10 +1,5 @@
 import styled from "styled-components";
-export const TabList = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.spacing.md};
-  border-bottom: 2px solid ${({ theme }) => theme.colors.white};
-  margin-bottom: ${({ theme }) => theme.spacing.xxl};
-`;
+
 export const Device = styled.div`
   height: ${({ theme }) => theme.containers.deviceHeight};
   width: ${({ theme }) => theme.containers.deviceWidth};
